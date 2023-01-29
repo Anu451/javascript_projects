@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Document</title>
+	</head>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
+		body {
+			/* height: 100%; */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 10px;
+		}
+		.question-ans {
+			/* padding: 10px; */
+		}
+		.container {
+			width: 400px;
+		}
+		.title {
+			/* margin: 20px 0 20px 0; */
+			padding-bottom: 30px;
+		}
+		.minus{
+			display: none;
+		}
+		.plus{
+			/* margin-left: 20px; */
+		}
+		.question {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			/* margin: 10px 0 10px 0; */
+			/* margin-bottom: 10px; */
+		}
+		.answer{
+			display: none;
+		}
+		.line {
+			height: 1px;
+			background-color: gray;
+			width: 90%;
+			margin: 20px;
+		}
+		.con {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.show .plus{
+			display: none;
+		}
+		.show .minus{
+			display: inline;
+		}
+		.show .answer{
+			display: block;
+		}
+	</style>
+
+	<body>
+		<div class="container">
+			<div class="title">
+				<h2>FAQs</h2>
+			</div>
+			<div class="question-ans">
+				<div class="question">
+					<h4>What is personal Plan</h4>
+					<div class="icons">
+						<span class="plus">
+							<i class="fas fa-plus"></i>
+						</span>
+						<span class="minus">
+							<i class="fas fa-minus"></i>
+						</span>
+					</div>
+				</div>
+				<div class="answer">
+					<p>
+						Personal Plan is a monthly subscription that gives you access to a
+						curated collection of 8,000+ top courses. The collection features
+						courses on in-demand professional topics — including web
+						development, IT certification, data science, web design, digital
+						marketing, and leadership — along with a selection of personal
+						development topics, such as language learning, arts and creativity,
+						and personal finance.
+					</p>
+				</div>
+				<div class="con">
+					<div class="line"></div>
+				</div>
+			</div>
+
+						<div class="question-ans">
+				<div class="question">
+					<h4>Whats the difference Personal Plant and buying course</h4>
+					<div class="icons">
+						<span class="plus">
+							<i class="fas fa-plus"></i>
+						</span>
+						<span class="minus">
+							<i class="fas fa-minus"></i>
+						</span>
+					</div>
+				</div>
+				<div class="answer">
+					<p>
+						With Personal Plan you gain monthly access to over 8,000 of our
+						top-rated courses and practice activities in top tech, business and
+						personal categories. When you purchase a single Udemy course, you
+						get lifetime access to that course and course material only.
+					</p>
+				</div>
+				<div class="con">
+					<div class="line"></div>
+				</div>
+			</div>
+
+			
+
+							<div class="question-ans">
+				<div class="question">
+					<h4>Whats the difference Personal Plant and buying course</h4>
+					<div class="icons">
+						<span class="plus">
+							<i class="fas fa-plus"></i>
+						</span>
+						<span class="minus">
+							<i class="fas fa-minus"></i>
+						</span>
+					</div>
+				</div>
+				<div class="answer">
+					<p>
+						With Personal Plan you gain monthly access to over 8,000 of our
+						top-rated courses and practice activities in top tech, business and
+						personal categories. When you purchase a single Udemy course, you
+						get lifetime access to that course and course material only.
+					</p>
+				</div>
+				<div class="con">
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+
+		const questions = document.querySelectorAll('.question-ans')
+		const btn  = document.querySelectorAll('.icons')
+
+btn.forEach(function(item){
+	// console.log(item)
+	item.addEventListener('click',function(e){
+		// console.log(e.currentTarget)
+		e.currentTarget.parentElement.parentElement.classList.toggle('show')
+	})
+})
+
+
+		
+	</script>
+</html>
